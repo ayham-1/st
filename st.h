@@ -14,9 +14,7 @@
 #define ATTRCMP(a, b)		((a).mode != (b).mode || (a).fg != (b).fg || \
 				(a).bg != (b).bg)
 #define TIMEDIFF(t1, t2)	((t1.tv_sec-t2.tv_sec)*1000 + \
-				(t1.tv_nsec-t2.tv_nsec)/1E6)
-#define MODBIT(x, set, bit)	((set) ? ((x) |= (bit)) : ((x) &= ~(bit)))
-
+				(t1.tv_nsec-t2.tv_nsec)/1E6) #define MODBIT(x, set, bit)	((set) ? ((x) |= (bit)) : ((x) &= ~(bit))) 
 #define TRUECOLOR(r,g,b)	(1 << 24 | (r) << 16 | (g) << 8 | (b))
 #define IS_TRUECOL(x)		(1 << 24 & (x))
 
@@ -133,4 +131,5 @@ extern char *termname;
 extern unsigned int tabspaces;
 extern unsigned int defaultfg;
 extern unsigned int defaultbg;
+extern float alpha;
 extern const int boxdraw, boxdraw_bold, boxdraw_braille;
